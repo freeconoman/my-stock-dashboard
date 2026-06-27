@@ -78,8 +78,8 @@ if st.button("분석 실행"):
             color = "green" if signal == "진입" else ("red" if signal == "청산" else "orange")
             st.markdown(f"### 📍 현재 신호: :{color}[**{signal}**]")
             
-            # 통계 데이터
-            periods = ["3개년", "5개년", "10개년", "22.01-25.03"]
+            # 통계 데이터 (1개년 포함)
+            periods = ["1개년", "3개년", "5개년", "10개년", "22.01-25.03"]
             stats = [get_backtest_stats(df, key, p) for p in periods]
             
             data = {
